@@ -9,6 +9,9 @@ The main libraries that I work with are scikit-learn, pandas, XGBoost, matplotli
                       to then create a Pipeline that uses a SimpleImputer ('mean' strategy for numerical, 'most_frequent' for categorical missing values) and OneHotEncoding
                       with categorical features. Once preprocessed, data is fed to an XGBoost model with already set parameters to create predictions.
 
+    -MLPipelineXGBoostGrid.py:    improved version of MLPipeline.py, as it includes a GridSearchCV that finds the best hyperparameters from a previously selected group for
+                                  an XGBoost model.
+                                  
 --> Libraries used:
 
     -Scikit-learn
