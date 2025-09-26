@@ -11,6 +11,8 @@ The main libraries that I work with are scikit-learn, pandas, XGBoost, matplotli
 
     -MLPipelineXGBoostGrid.py:    improved version of MLPipeline.py, as it includes a GridSearchCV that finds the best hyperparameters from a previously selected group for
                                   an XGBoost model.
+
+    -ML_XGBoostLoop.py:    this code creates a loop to find the best learning rate for an XGBoost model, using MAE as evaluation metric.
                                   
 --> Libraries used:
 
