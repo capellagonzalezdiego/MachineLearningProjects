@@ -1,5 +1,5 @@
 # This code builds a Machine Learning pipeline with an XGBoost model to generate predictions from training and test datasets. It automatically
-# detects the target feature, and preprocesses categorical features with OneHot Encoding, and handles missing values with SimpleImputer, using 
+# detects the target feature, and preprocesses categorical features with OneHot Encoding. It also handles missing values with SimpleImputer, using 
 # averages for numerical values and the most frequent ones in categorical values. Then, data is fed to an XGBoostRegressor, which is evaluated
 # with cross-validation, using Mean Absolute Error (MAE) as metric. Finally, predictions are generated for the test dataset.
 
@@ -118,5 +118,6 @@ from sklearn.model_selection import cross_val_score
 scores = -1 * cross_val_score(pipeline, X, y, cv=5, scoring='neg_mean_absolute_error')
 print(f"MAE scores: {scores}")
 print(f"Average MAE scores across experiments: {scores.mean()}")
+
 
 final_pred = pipeline.predict(test_data)
